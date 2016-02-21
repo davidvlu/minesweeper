@@ -3,7 +3,7 @@ import com.sun.tools.javac.util.Assert;
 /**
  * Created by Developer on 2/20/16.
  */
-public class Grid {
+public class Board {
     private final Cell[][] cells;
     private final int bombCount;
 
@@ -11,7 +11,7 @@ public class Grid {
         Covered, Uncovered;
     }
 
-    Grid(int gridSize, int bombCount) {
+    Board(int gridSize, int bombCount) {
         Assert.check(gridSize > 1, "gridSize must be greater than 1");
         Assert.check(bombCount > 0, "bombCount must greater than 0");
         cells = new Cell[gridSize][gridSize];
